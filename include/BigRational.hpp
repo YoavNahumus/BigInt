@@ -7,6 +7,7 @@ class BigRational final
 {
 public:
     BigRational();
+    BigRational(int64_t numerator);
     BigRational(BigInt numerator);
     explicit BigRational(BigInt numerator, BigUint denominator);
 
