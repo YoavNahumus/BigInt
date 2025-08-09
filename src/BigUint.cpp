@@ -410,7 +410,7 @@ std::string BigUint::to_string(const Base base) const
     {
         auto iter = _number.crbegin();
         static constexpr uint32_t HEX_CHARACTERS_IN_UINT64 = sizeof(uint64_t) * 2;
-        oss << *iter << std::setfill('0') << std::setw(HEX_CHARACTERS_IN_UINT64);
+        oss << std::hex << *iter << std::setfill('0') << std::setw(HEX_CHARACTERS_IN_UINT64);
         while (++iter != _number.crend())
         {
             oss << *iter;
